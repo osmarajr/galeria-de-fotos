@@ -1,0 +1,16 @@
+.container-galeria{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+img{
+    width:320px;
+    height:205px;
+}
+@media screen and(max-width: 760px){
+    .container-galeria{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+}
