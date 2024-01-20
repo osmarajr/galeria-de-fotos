@@ -1,5 +1,5 @@
-body{
-    margin: 0 auto;
+*{
+    box-sizing: border-box;
 }
 h1{
     text-align: center;
@@ -7,15 +7,17 @@ h1{
 }
 .container-galeria{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-columns: repeat(5,20%);
+    grid-column-gap: 5px;
 }
 img{
-    width:320px;
-    height:205px;
+    width:100%;
 }
-@media screen and(min-width: 780px){
+@media screen and(max-width: 780px){
     .container-galeria{
         display: grid;
-        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-rows: repeat(5,20%);
     }
 }
