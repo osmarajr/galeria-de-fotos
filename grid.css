@@ -15,9 +15,13 @@ h1{
 img{
     width:100%;
 }
-@media screen and(max-width: 780px){
+@media (max-width: 360px){
     .container-galeria{
         display: grid;
         grid-template-rows: repeat(5,20%);
+        grid-template-columns: auto;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-row-gap: 5px;
     }
 }
