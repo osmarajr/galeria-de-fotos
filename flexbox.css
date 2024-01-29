@@ -5,30 +5,38 @@ h1{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
+.container{
+    margin-left: 3.5vw;
+    margin-top: 80px;
+    width: 90vw;
+    border: 1px solid #121212;
+}
+
 .container-galeria{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     gap: 5px;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    overflow-y: scroll;
 }
 img{
-    width: 20%;
+    width: 40%;
 }
 img:hover{
     opacity: 0.5;
-    flex-grow: 1;
 }
 /* media query Ipad Pro 1024x */
 @media (max-width: 1024px){
     .container-galeria{
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: crow wrap;
         align-items: center;
         gap: 5px;
     }
     img{
         
-    width: 90%;
+    width: 50%;
     }
 }
 @media (max-width: 768px){
