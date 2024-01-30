@@ -5,26 +5,55 @@ h1{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
 }
-.container-galeria{
+.container{
+    margin-left: 4.5vw;
+    margin-top: 80px;
+    width: 90vw;
+}
+.container .container-galeria{
     display: grid;
     justify-items: stretch;
     align-items: stretch;
-    grid-template-columns: repeat(5,20%);
+    grid-template-areas: "img1 img2 img3 img4 img5 img5 img7 img8 img9";
     grid-column-gap: 5px;
+    position: relative;
+    overflow-x: scroll;
 }
 img{
-    width:100%;
+    width:30vw;
 }
 img:hover{
     opacity: 0.5;
 }
-@media (max-width: 360px){
-    .container-galeria{
-        display: grid;
-        grid-template-rows: repeat(5,20%);
-        grid-template-columns: auto;
-        justify-items: stretch;
-        align-items: stretch;
-        grid-row-gap: 5px;
+@media (max-width: 768px){
+    .container .container-galeria{
+        grid-template-areas: 
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6"
+            "img7"
+            "img8"
+            "img9"
+        ;
+    }
+    img{
+        width:90vw;
+    }
+}
+@media (max-width: 1024px){
+    .container .container-galeria{
+        grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9"
+        ;
+    }
+    img{
+        width:45vw;
     }
 }
